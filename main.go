@@ -16,7 +16,7 @@ func main() {
 
 		if err != nil {
 			log.Default().Fatalln("Could not execute http request.")
-			return
+			continue
 		}
 
 		log.Default().Println("Successfully executed http request.")
@@ -25,7 +25,7 @@ func main() {
 
 		if err != nil {
 			log.Default().Fatalln("Could not read http response body.")
-			return
+			continue
 		}
 
 		log.Default().Println(string(responseData))
